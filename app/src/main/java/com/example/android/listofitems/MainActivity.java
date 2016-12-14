@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.content.Intent;
+import android.util.Log;
 
 public class MainActivity extends Activity {
 
@@ -22,6 +23,20 @@ public class MainActivity extends Activity {
                 Intent eventListIntent = new Intent(
                         MainActivity.this,
                         EventListActivity.class
+                );
+                startActivity(eventListIntent);
+            }
+        });
+
+        // Create an event listener so that when the user clicks on Card Recycler, they
+        // are taken to the Card Recycler screen
+        TextView cardRecycler = (TextView) findViewById(R.id.card_recycler);
+        cardRecycler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent eventListIntent = new Intent(
+                        MainActivity.this,
+                        EventRecyclerActivity.class
                 );
                 startActivity(eventListIntent);
             }
