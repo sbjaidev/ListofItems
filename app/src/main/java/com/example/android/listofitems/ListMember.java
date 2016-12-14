@@ -34,9 +34,9 @@ class ListMember {
 
     /**
      *
-     * @param pImageResourceId
-     * @param pTitle
-     * @param pDescription
+     * @param pImageResourceId - location of the image in the card
+     * @param pTitle - title of the card
+     * @param pDescription - description of the card
      */
     ListMember(int pImageResourceId, String pTitle, String pDescription) {
         this(pImageResourceId, pTitle);
@@ -46,8 +46,8 @@ class ListMember {
 
     /**
      *
-     * @param pTitle
-     * @param pDescription
+     * @param pTitle - title of the card
+     * @param pDescription - description of the card
      */
     ListMember(String pTitle, String pDescription) {
         this(pTitle);
@@ -57,7 +57,7 @@ class ListMember {
 
     /**
      *
-     * @param pTitle
+     * @param pTitle - title of the card
      */
     ListMember(String pTitle) {
         mTitle = pTitle;
@@ -67,8 +67,8 @@ class ListMember {
 
     /**
      *
-     * @param pImageResourceId
-     * @param pTitle
+     * @param pImageResourceId - location of the image in the card
+     * @param pTitle - title of the card
      */
     ListMember(int pImageResourceId, String pTitle) {
         this(pTitle);
@@ -78,31 +78,31 @@ class ListMember {
 
     /**
      *
-     * @return
+     * @return - the location of the image to be placed in the card
      */
     int getImageResourceId() { return mImageResourceId; }
 
     /**
      *
-     * @return
+     * @return - the title of the card
      */
-    public String getTitle() { return mTitle; }
+    String getTitle() { return mTitle; }
 
     /**
      *
-     * @return
+     * @return - the description of the card
      */
     String getDescription() { return mDescription; }
 
     /**
      *
-     * @return
+     * @return - check whether the card has an image
      */
     boolean hasImage() { return mHasImage; }
 
     /**
      *
-     * @return
+     * @return - check whether the card has a description
      */
     boolean hasDescription() { return mHasDescription; }
 }

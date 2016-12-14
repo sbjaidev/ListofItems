@@ -29,6 +29,13 @@ class ListItemAdapter extends ArrayAdapter<ListMember> {
         super(context, 0, listItemsArrayList);
     }
 
+    /**
+     *
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 

@@ -8,9 +8,10 @@ import java.util.ArrayList;
 
 public class EventListActivity extends Activity {
 
-
-
-
+    /**
+     *
+     * @param savedInstanceState - saved state of the instance
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

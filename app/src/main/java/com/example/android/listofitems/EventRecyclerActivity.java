@@ -4,15 +4,18 @@ import android.app.Activity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.os.Bundle;
-import android.util.Log;
 
 import java.util.ArrayList;
 
+/**
+ *
+ */
 public class EventRecyclerActivity extends Activity {
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycler);
@@ -30,18 +33,18 @@ public class EventRecyclerActivity extends Activity {
         eventList.add(new ListMember(R.mipmap.ic_launcher, "title9", "description9"));
         eventList.add(new ListMember(R.mipmap.ic_launcher, "title0", "description0"));
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.test_recycler_view);
+        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.test_recycler_view);
 
         // use this setting to improve performance if you know that changes in
         // content do not change the layout size of the RecyclerView.
         mRecyclerView.setHasFixedSize(true);
 
         // user a linear layout manager
-        mLayoutManager = new LinearLayoutManager(this);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter
-        mAdapter = new EventCardAdapter(eventList);
+        RecyclerView.Adapter mAdapter = new EventCardAdapter(eventList);
         mRecyclerView.setAdapter(mAdapter);
     }
 

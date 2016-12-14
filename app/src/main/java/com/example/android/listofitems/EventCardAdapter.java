@@ -4,7 +4,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.ImageView;
 import android.view.ViewGroup;
@@ -13,27 +12,27 @@ import android.view.View;
 import java.util.ArrayList;
 
 /**
- * Created by Balu on 12/13/16.
+ *
  */
 
-public class EventCardAdapter extends RecyclerView.Adapter<EventCardAdapter.EventCardViewHolder> {
+class EventCardAdapter extends RecyclerView.Adapter<EventCardAdapter.EventCardViewHolder> {
     private ArrayList<ListMember> mEventList;
 
     // Provide a reference to the views for each data item. Complex data items
     // may need more than one view per item, and you provide access to all the
     // views for a data item in a view holder.
-    public static class EventCardViewHolder extends RecyclerView.ViewHolder {
+    static class EventCardViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public CardView mCardView;
-        public ImageView mImageView;
-        public TextView mDescriptionView;
-        public TextView mTitleView;
+        CardView mCardView;
+        ImageView mImageView;
+        TextView mDescriptionView;
+        TextView mTitleView;
 
         /**
          *
          * @param v
          */
-        public EventCardViewHolder(View v) {
+        EventCardViewHolder(View v) {
             super(v);
             mCardView = (CardView) v.findViewById(R.id.event_card_view);
             mTitleView = (TextView) v.findViewById(R.id.event_card_title);
@@ -43,7 +42,7 @@ public class EventCardAdapter extends RecyclerView.Adapter<EventCardAdapter.Even
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public EventCardAdapter(ArrayList<ListMember> pEventList) {
+    EventCardAdapter(ArrayList<ListMember> pEventList) {
         Log.v("EventCardAdapter", "Entered EventCardAdapter Constructor");
         mEventList = pEventList;
     }
@@ -75,10 +74,5 @@ public class EventCardAdapter extends RecyclerView.Adapter<EventCardAdapter.Even
     @Override
     public int getItemCount() {
         return mEventList.size();
-    }
-
-    @Override
-    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
-        super.onAttachedToRecyclerView(recyclerView);
     }
 }
