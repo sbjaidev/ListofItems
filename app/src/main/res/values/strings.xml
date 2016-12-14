@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">List of Items</string>
+    <string name="app_name">Event Planner</string>
+    <string name="my_event">My Events</string>
 </resources>
